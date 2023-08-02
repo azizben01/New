@@ -1,22 +1,11 @@
-//*package main
-
-//import "fmt"
-
-//func main() {
-//	fmt.Printf("HOLLA")
-//}
-
-package main
-
+package main 
 import (
 	"fmt"
-	"math/rand"
-	"time"
+	"math"
 )
-
-func main() {
-	number := rand.Intn(10)
-	fmt.Println(number)
-	fmt.Printf("The time now is", time.Now())
-
+func operation (a, b, c int) int (
+	return (a+b)/c 
+)
+func main () {
+	fmt.Println(operation(5,1,3))
 }
