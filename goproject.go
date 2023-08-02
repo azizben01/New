@@ -17,6 +17,6 @@ import (
 func main() {
 	number := rand.Intn(10)
 	fmt.Println(number)
-	fmt.Printf("The time is", time.Now())
+	fmt.Printf("The time now is", time.Now())
 
 }
