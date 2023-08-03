@@ -1,12 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func operation(a, b, c int) int {
-	return (a + b) / c
+func swap(one, two string) (string, string) {
+	return two, one
 }
 func main() {
-	fmt.Println(operation(5, 1, 3))
+	var first, second string = "Analized.", "Well"
+	fmt.Println(swap(first, second))
 }
