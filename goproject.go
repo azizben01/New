@@ -2,38 +2,34 @@
 
 import "fmt"
 
-func swap(one, two string) (string, string) {
-	return two, one
+func Compare(a, b int) string {
+	if a > b {
+		return "a is greater than b"
+	}
+	return "b is greater than a"
 }
 func main() {
-	first, second := "Analized.", "Well"
-	fmt.Println(swap(first, second))
+	fmt.Println(Compare(12, 40))
 }
 */
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func reverseString(input string) string {
-	runes := []rune(input) // Convert the string to a slice of runes
-	length := len(runes)
+func reverseStringWithIf(input string) string {
+	reversed := ""
+	length := len(input)
 
-	// Swap characters from the beginning and end of the string
-	for i := 0; i < length/2; i++ {
-		runes[i], runes[length-i-1] = runes[length-i-1], runes[i]
+	for i := length - 1; i >= 0; i-- {
+		reversed += string(input[i])
 	}
 
-	return string(runes) // Convert the slice of runes back to a string
+	return reversed
 }
 
 func main() {
-	fmt.Print("Enter a string: ")
-	var input string
-	fmt.Scanln(&input)
-
-	reversed := reverseString(input)
-	fmt.Println("Reversed string:", reversed)
+	input := "hello"
+	reversed := reverseStringWithIf(input)
+	fmt.Println(reversed) // Output: "olleh"
 }
